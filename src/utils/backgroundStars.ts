@@ -5,7 +5,7 @@ let maxStars = isNotMobileDevice() ? 75 : 35;
 let minTop = isNotMobileDevice() ? 1 : 1;
 let maxTop = isNotMobileDevice() ? 100 : 70;
 
-let minLeft = isNotMobileDevice() ? -60 : -20;
+let minLeft = isNotMobileDevice() ? -100 : -20;
 let maxLeft = isNotMobileDevice() ? 80 : 110;
 
 function setProperty(left: number, top: number, animationDelay: number, div: HTMLDivElement) {

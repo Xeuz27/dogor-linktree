@@ -1,38 +1,59 @@
 <div class="absolute inset-0">
     <!-- whole back background -->
     <div class="absolute inset-0 z-10">
-        <!-- greeninsh left side circle -->
+        <!-- red left-top side circle -->
         <!-- smaller than 640px -->
-        <div
-            class="absolute inset-0 z-20 bg-[radial-gradient(900px_at_-85%_-40%,rgba(45,212,191,0.70),transparent)] sm:hidden"
-        >
-        </div>
+        <div id="bg-1" class="absolute inset-0 z-20 sm:hidden"></div>
         <!-- smaller than 768px -->
-        <div
-            class="absolute inset-0 z-20 hidden bg-[radial-gradient(1100px_at_-80%_-20%,rgba(45,212,191,0.70),transparent)] sm:max-md:block"
-        >
-        </div>
+        <div id="bg-2" class="absolute inset-0 z-20 hidden sm:max-md:block"></div>
         <!-- smaller than 1024px -->
-        <div
-            class="absolute inset-0 z-20 hidden bg-[radial-gradient(1400px_at_-80%_-50%,rgba(45,212,191,0.70),transparent)] md:max-lg:block"
-        >
-        </div>
+        <div id="bg-3" class="absolute inset-0 z-20 hidden md:max-lg:block"></div>
         <!-- smaller than 1280px -->
-        <div
-            class="absolute inset-0 z-20 hidden bg-[radial-gradient(1600px_at_-70%_-60%,rgba(45,212,191,0.70),transparent)] lg:max-xl:block"
-        >
-        </div>
+        <div id="bg-4" class="absolute inset-0 z-20 hidden lg:max-xl:block"></div>
         <!-- bigger  than 1280px -->
-        <div
-            class="absolute inset-0 z-20 hidden bg-[radial-gradient(1600px_at_-40%_-60%,rgba(45,212,191,0.70),transparent)] xl:block"
-        >
-        </div>
+        <div id="bg-5" class="absolute inset-0 z-20 hidden xl:block"></div>
 
-        <!-- greeninsh left side circle -->
-
-        <div
-            class="absolute inset-0 z-20 bg-[radial-gradient(800px_at_80%_120%,rgba(12,11,58,0.90),transparent)]"
-        >
-        </div>
+        <!-- black right-bottom side circle -->
+        <div id="bg-6" class="absolute inset-0 z-20"></div>
     </div>
 </div>
+<style>
+    #bg-1 {
+        background-image: radial-gradient(
+            900px at -85% -40%,
+            rgba(229, 131, 92, 0.35),
+            transparent
+        );
+    }
+    #bg-2 {
+        background-image: radial-gradient(
+            1100px at -80% -20%,
+            rgba(229, 131, 92, 0.35),
+            transparent
+        );
+    }
+    #bg-3 {
+        background-image: radial-gradient(
+            1400px at -80% -50%,
+            rgba(229, 131, 92, 0.35),
+            transparent
+        );
+    }
+    #bg-4 {
+        background-image: radial-gradient(
+            1600px at -70% -60%,
+            rgba(229, 131, 92, 0.35),
+            transparent
+        );
+    }
+    #bg-5 {
+        background-image: radial-gradient(
+            1600px at -40% -60%,
+            rgba(229, 131, 92, 0.35),
+            transparent
+        );
+    }
+    #bg-6 {
+        background-image: radial-gradient(800px at 80% 90%, rgba(0, 0, 0, 0.75), transparent);
+    }
+</style>
