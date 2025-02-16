@@ -5,7 +5,7 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://dogor.vercel.app/',
+    site: 'https://dogor-linktree.vercel.app/',
     integrations: [tailwind()],
     output: 'server',
     adapter: vercel(),
