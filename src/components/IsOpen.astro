@@ -14,19 +14,20 @@ const days = {
 const date = new Date();
 
 let dia = format(date, 'dddd').toLowerCase();
-let horas = format(addHour(date), 'HHmm');
+let horas = format(date, 'HHmm');
 let horasNumber = parseInt(horas);
 let isOpen;
-let classes = isOpen
-    ? 'text-green-500 font-semibold underline decoration-green-500 underline-offset-1 text-xl text-center'
-    : 'text-red-500 font-semibold underline decoration-red-500 underline-offset-1 text-xl text-center';
-let texto = isOpen ? 'Abierto' : 'Cerrado';
 
 isOpen = days[dia]
     ? dia === 'saturday' || dia === 'sunday'
         ? horasNumber > 1730 && horasNumber < 2359
         : horasNumber > 1730 && horasNumber < 2330
     : false;
+
+let classes = isOpen
+    ? 'text-green-500 font-semibold underline decoration-green-500 underline-offset-1 text-xl text-center'
+    : 'text-red-500 font-semibold underline decoration-red-500 underline-offset-1 text-xl text-center';
+let texto = isOpen ? 'Abierto' : 'Cerrado';
 ---
 
 <span class={classes}>{texto}</span>
