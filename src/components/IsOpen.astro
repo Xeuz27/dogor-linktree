@@ -14,15 +14,13 @@ const days = {
 const date = new Date();
 
 let dia = format(date, 'dddd').toLowerCase();
-let horas = format(addHour(date, -4), 'HHmm');
-let horasNumber = parseInt(horas);
-let isOpen;
-console.log(horas);
-isOpen = days[dia]
-    ? dia === 'saturday' || dia === 'sunday'
-        ? horasNumber > 1730 && horasNumber < 2359
-        : horasNumber > 1730 && horasNumber < 2330
-    : false;
+let horasActual = format(addHour(date, -4), 'HHmm');
+let horasActualNumber = parseInt(horasActual, 10);
+
+const isValidDay = days[dia];
+const diasExtendidos = ['friday', 'saturday', 'sunday'];
+const horaCierre = diasExtendidos.includes(dia) ? 2359 : 2330;
+const isOpen = isValidDay && horasActualNumber > 1730 && horasActualNumber < horaCierre;
 
 let classes = isOpen
     ? 'text-green-500 font-semibold underline decoration-green-500 underline-offset-1 text-xl text-center'
